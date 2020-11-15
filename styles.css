@@ -7,13 +7,20 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
+  position: relative;
   background-color: #e2fcf2;
 }
 
 .moveable-icon {
   height: 50px;
   width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
   background-color: #0060c8;
   border: 1px solid #0060c8;
+  position: absolute;
   border-radius: 100%;
 }
