@@ -24,3 +24,7 @@ body {
   position: absolute;
   border-radius: 100%;
 }
+
+.moveable-icon:hover {
+  cursor: move;
+}
