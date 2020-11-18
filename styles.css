@@ -28,3 +28,7 @@ body {
 .moveable-icon:hover {
   cursor: move;
 }
+
+.icon-menu {
+  color: black;
+}
