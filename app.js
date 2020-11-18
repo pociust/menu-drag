@@ -1,17 +1,20 @@
 const icon = document.getElementById('moveableIcon');
+const iconMenu = document.getElementById('iconMenu');
 let isMoving = false;
-let x, y;
+let x, y, shiftX, shiftY
 
 icon.onmousedown = event => {
   isMoving = true;
+  shiftX = event.clientX - icon.getBoundingClientRect().left;
+  shiftY = event.clientY - icon.getBoundingClientRect().top;
   x = event.clientX;
   y = event.clientY;
 };
 
 document.onmousemove = event => {
   if (isMoving == true) {
-    x = event.clientX;
-    y = event.clientY;
+    x = event.clientX - shiftX;
+    y = event.clientY - shiftY;
     icon.setAttribute("style", `left:${x}px; top: ${y}px;`);
  
   }
@@ -19,5 +22,9 @@ document.onmousemove = event => {
 
 document.onmouseup = () => {
   isMoving = false;
-  icon.setAttribute("style", `left:${x}px; top: ${y}px;`);
 };
+
+icon.addEventListener('dblclick', function(e) {
+  console.log('hello')
+  iconMenu.hidden = false;
+})
