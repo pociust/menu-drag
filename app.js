@@ -4,20 +4,20 @@ let x, y;
 
 icon.onmousedown = event => {
   isMoving = true;
-  x = event.offsetX;
-  y = event.offsetY;
+  x = event.clientX;
+  y = event.clientY;
 };
 
 document.onmousemove = event => {
   if (isMoving == true) {
-    console.log(x, y)
+    x = event.clientX;
+    y = event.clientY;
     icon.setAttribute("style", `left:${x}px; top: ${y}px;`);
-    x = event.offsetX;
-    y = event.offsetY;
+ 
   }
-}
+};
 
 document.onmouseup = () => {
   isMoving = false;
   icon.setAttribute("style", `left:${x}px; top: ${y}px;`);
-}
+};
