@@ -30,5 +30,7 @@ body {
 }
 
 .icon-menu {
+  display: flex;
+  flex-direction: column;
   color: black;
 }

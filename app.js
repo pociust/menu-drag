@@ -22,9 +22,11 @@ document.onmousemove = event => {
 
 document.onmouseup = () => {
   isMoving = false;
+
 };
 
 icon.addEventListener('dblclick', function(e) {
-  console.log('hello')
-  iconMenu.hidden = false;
+  console.log('1')
+  iconMenu.style.display = 'flex';
+  icon.style.display = 'hidden';
 })
